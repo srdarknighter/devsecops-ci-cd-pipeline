@@ -108,8 +108,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type = sha, format = long
-            type = ref, event = branch
+            type=sha, format=long
+            type=ref, event=branch
             latest
 
       - name: Build Docker Image
@@ -128,7 +128,7 @@ jobs:
           format: table
           exit-code: '1'
           ignore-unfixed: true
-          vuln-type: 'os, library'
+          vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
 
       - name: Push Docker Image
